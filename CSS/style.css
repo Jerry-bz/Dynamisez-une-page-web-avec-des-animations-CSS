@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__image {
+  width: 40%;
+}
+
+@media (min-width: 992px) {
+  .header {
+    height: 8vh;
+  }
+  .header__image {
+    width: 25vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

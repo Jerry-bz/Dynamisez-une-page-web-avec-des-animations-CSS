@@ -1,0 +1,18 @@
+@import "../SCSS/utils/variables";
+@import "../SCSS/utils/mixins";
+
+.header {
+    @include flex-center;
+        &__image {
+            width: 40%;
+        }
+}
+
+@media (min-width:992px) {
+    .header {
+        height:8vh; 
+        &__image {
+            width: 25vw;
+        }
+    }
+}
