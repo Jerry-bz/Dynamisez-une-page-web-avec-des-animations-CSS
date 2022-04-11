@@ -1,18 +1,184 @@
 @import "../SCSS/utils/variables";
 @import "../SCSS/utils/mixins";
 
-.header {
-    @include flex-center;
-        &__image {
-            width: 40%;
-        }
+*{
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width:992px) {
-    .header {
-        height:8vh; 
-        &__image {
-            width: 25vw;
+.header {
+    @include flex-row-center;
+    font-family: $font-title;
+    height:12vh;
+}
+
+.localization {
+    &__text {
+        @include flex-row-center;
+        padding:2% 0;
+        font-family: $font-text;
+        font-weight:bolder;
+        background-color:rgba(234, 231, 231, 0.996);
+        box-shadow:inset 0px 2px 3px lightgrey;
+    }
+    p {
+        @include flex-row-center;
+        width: 80%;
+        margin-right: 10%;
+    }
+    i {
+        padding-right: 3%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .localization {
+        p{
+            margin-left:5%;
         }
     }
+}
+
+.reservation {
+   @include flex-col-center;
+    text-align: center;
+    background-color:$background;
+    padding-bottom: 5%;
+    &__text1 {
+        margin: 1% 0;
+        font-family: $font-text;
+        font-weight: bolder;
+    }
+    &__text2 { 
+        margin: 1% 0;
+        padding-bottom:5%;
+        font-family: $font-text;
+    }
+    &__button {
+        @include button--special;
+    }
+}
+
+.functioning {
+    padding-bottom: 10%;
+    &__title {
+        @include police-title--bolder;
+        padding: 5% 0 0 3%;
+        margin-left:5%;
+    }
+
+    .functioning--menu1 {
+        @include functioning--menu($background);
+    }
+
+    .functioning--menu2 {
+        @include functioning--menu($background);
+    }
+
+    .functioning--menu3 {
+        @include functioning--menu($background);
+    }
+}
+
+.functioning--number {
+    @include number--menu;
+    margin-left: -10px;
+}
+
+.functioning{
+    i{
+        color:grey;
+        margin-left:20px;
+    }
+    &__text {
+        margin-left: 30px;;
+    }
+    .functioning--logo {
+        color: $color-primary;
+    }
+}
+#restaurants {
+    background-color:$background;
+    padding-bottom: 10%;
+    @include flex-col-center;
+}
+
+.restaurants__title {
+    @include police-title--bolder;
+    padding: 5% 0 0 3%;
+    margin-right: 55%;
+}
+
+.restaurant {
+    position:relative;
+    border-radius: 25px;
+    box-shadow: 3px 3px rgb(207, 205, 205);
+    width: 91vw;
+    background-color: white;
+    margin:5% 0%;
+    padding-bottom: 0.5vh;
+    img {
+        width:91vw;
+        height:28vh;
+        object-fit: cover;
+        border-radius: 25px 25px 0px 0px;
+    }
+    &__text {
+        margin:2% 0% 1% 5%;
+    }
+
+    &__element1 {
+        @include police-title--bolder;
+        @include flex-row-center;
+        justify-content: space-between;
+    }
+
+    i{
+        margin-right: 10%;
+        margin-top: 15px;
+    }
+    
+    &__element2 {
+        font-family: $font-text;
+        padding-bottom: 2%;
+    }
+}
+
+footer {
+    background-color: rgba(57, 57, 57, 0.975);
+    color:white;
+    padding: 5% 0;
+    font-family: $font-text;
+
+    h3 {
+        font-family: $font-title;
+        font-weight: 100;
+        margin-left: 5%;
+    }
+
+    ul {
+        li {
+            margin-right: 2%;
+        }
+    }
+
+    a {
+        display:flex;
+        margin-left:5%;
+        text-decoration: none;
+        color:white;
+    }
+
+    span {
+        margin-left: 3%;
+    }
+    
+    .footer__space {
+        margin-left:4.5%;
+    }
+}
+
+.box__new {
+    @include box--new;
+    font-weight: 500;
 }
