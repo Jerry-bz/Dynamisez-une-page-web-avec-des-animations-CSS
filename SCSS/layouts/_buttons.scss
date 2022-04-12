@@ -1,0 +1,10 @@
+.button--purple {
+    border-radius:25px 25px 25px 25px;
+    background: linear-gradient($color-secondary, $color-primary);
+    font-family: $font-text;
+    opacity: 80%;
+    border: none;
+    color: white;
+    padding: 5% 10%;
+    cursor: pointer;
+}

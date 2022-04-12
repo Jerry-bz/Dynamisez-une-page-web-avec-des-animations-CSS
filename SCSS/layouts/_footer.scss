@@ -1,0 +1,34 @@
+footer {
+    background-color: rgba(57, 57, 57, 0.975);
+    color:white;
+    padding: 5% 0;
+    font-family: $font-text;
+
+    h3 {
+        font-family: $font-title;
+        font-weight: 100;
+        margin-left: 5%;
+        margin-bottom: 3%;
+    }
+
+    ul {
+        li {
+            margin-right: 2%;
+        }
+    }
+
+    a {
+        display:flex;
+        margin:1% 0 1% 5%;
+        text-decoration: none;
+        color:white;
+    }
+
+    span {
+        margin-left: 3%;
+    }
+    
+    .footer__space {
+        margin-left:4.5%;
+    }
+}

@@ -1,16 +1,3 @@
-@import "../SCSS/utils/variables";
-@import "../SCSS/utils/mixins";
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.header {
-    @include flex-row-center;
-    font-family: $font-title;
-    height:12vh;
-}
 
 .localization {
     &__text {
@@ -18,9 +5,10 @@
         padding:2% 0;
         font-family: $font-text;
         font-weight:bolder;
-        background-color:rgba(234, 231, 231, 0.996);
-        box-shadow:inset 0px 2px 3px lightgrey;
+        background-color:darken($color: $background, $amount: 10%);
+        box-shadow:inset 0px 2px 3px darken($boxshadow, $amount:25%);
     }
+    
     p {
         @include flex-row-center;
         width: 80%;
@@ -28,14 +16,6 @@
     }
     i {
         padding-right: 3%;
-    }
-}
-
-@media screen and (min-width:768px) {
-    .localization {
-        p{
-            margin-left:5%;
-        }
     }
 }
 
@@ -53,10 +33,7 @@
         margin: 1% 0;
         padding-bottom:5%;
         font-family: $font-text;
-    }
-    &__button {
-        @include button--special;
-    }
+    } 
 }
 
 .functioning {
@@ -68,22 +45,33 @@
     }
 
     .functioning--menu1 {
-        @include functioning--menu($background);
-    }
-
-    .functioning--menu2 {
-        @include functioning--menu($background);
-    }
-
-    .functioning--menu3 {
-        @include functioning--menu($background);
+        display: flex;
+        align-items: center;
+        @include police-title--bolder;
+        padding:25px 30px 25px 0px;
+        font-size: 20px;
+        border-radius:25px 25px;
+        box-shadow: 2px 2px 3px $boxshadow;
+        border: none;
+        background-color:$background;
+        width: 85%;
+        margin:5% 0 3% 5%;
     }
 }
 
 .functioning--number {
-    @include number--menu;
-    margin-left: -10px;
+    color:white;
+    background-color: $color-primary;
+    height:30px;
+    width: 30px;
+    border-radius: 25px 25px;
+    @include flex-row-center;
+    align-items: center;
+    position:relative;
+    right:11px;
 }
+
+
 
 .functioning{
     i{
@@ -97,6 +85,7 @@
         color: $color-primary;
     }
 }
+
 #restaurants {
     background-color:$background;
     padding-bottom: 10%;
@@ -112,11 +101,17 @@
 .restaurant {
     position:relative;
     border-radius: 25px;
-    box-shadow: 3px 3px rgb(207, 205, 205);
+    box-shadow: 3px 3px $boxshadow;
     width: 91vw;
     background-color: white;
     margin:5% 0%;
     padding-bottom: 0.5vh;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
     img {
         width:91vw;
         height:28vh;
@@ -142,43 +137,18 @@
         font-family: $font-text;
         padding-bottom: 2%;
     }
-}
-
-footer {
-    background-color: rgba(57, 57, 57, 0.975);
-    color:white;
-    padding: 5% 0;
-    font-family: $font-text;
-
-    h3 {
-        font-family: $font-title;
-        font-weight: 100;
-        margin-left: 5%;
-    }
-
-    ul {
-        li {
-            margin-right: 2%;
-        }
-    }
-
-    a {
-        display:flex;
-        margin-left:5%;
-        text-decoration: none;
-        color:white;
-    }
-
-    span {
-        margin-left: 3%;
-    }
     
-    .footer__space {
-        margin-left:4.5%;
-    }
 }
 
 .box__new {
-    @include box--new;
+    background:$color-tertiary;
+    width: 75px;
+    text-align: center;
+    color: darken($color: $color-tertiary, $amount: 45);
+    padding:1%;
+    font-size: $font-text;
+    position: absolute;
+    top:8%;
+    left:70%;
     font-weight: 500;
 }
