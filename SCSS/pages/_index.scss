@@ -12,7 +12,7 @@
     p {
         @include flex-row-center;
         width: 80%;
-        margin-right: 10%;
+        margin-right:3em;
     }
     i {
         padding-right: 3%;
@@ -23,28 +23,28 @@
    @include flex-col-center;
     text-align: center;
     background-color:$background;
-    padding-bottom: 5%;
+    padding-bottom:2.5em;
     &__text1 {
-        margin: 1% 0;
+        margin: 0.5em 0;
         font-family: $font-text;
         font-weight: bolder;
     }
     &__text2 { 
-        margin: 1% 0;
-        padding-bottom:5%;
+        margin: 0.5em 0;
+        padding-bottom:1.5em;
         font-family: $font-text;
     } 
 }
 
 .functioning {
-    padding-bottom: 10%;
+    padding-bottom:3em;
     &__title {
         @include police-title--bolder;
-        padding: 5% 0 0 3%;
+        padding: 2em 0em 0em 0em;
         margin-left:5%;
     }
 
-    .functioning--menu1 {
+    &-menu {
         display: flex;
         align-items: center;
         @include police-title--bolder;
@@ -55,7 +55,7 @@
         border: none;
         background-color:$background;
         width: 85%;
-        margin:5% 0 3% 5%;
+        margin:1em 2% 1em 5%;
     }
 }
 
@@ -86,34 +86,28 @@
     }
 }
 
-#restaurants {
+.restaurants {
     background-color:$background;
     padding-bottom: 10%;
-    @include flex-col-center;
 }
 
 .restaurants__title {
     @include police-title--bolder;
-    padding: 5% 0 0 3%;
-    margin-right: 55%;
+    padding: 2em 0em 0em 0em;
+        margin-left:5%;
 }
 
 .restaurant {
     position:relative;
     border-radius: 25px;
     box-shadow: 3px 3px $boxshadow;
-    width: 91vw;
+    width: 95vw;
     background-color: white;
-    margin:5% 0%;
-    padding-bottom: 0.5vh;
-    
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+    margin:1.5em 3%;
+    padding-bottom: 1em;
     
     img {
-        width:91vw;
+        width:95vw;
         height:28vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
@@ -140,7 +134,27 @@
     
 }
 
-.box__new {
+
+@media (min-width: 992px) {
+    .restaurants {
+      @include flex-col-center;
+
+    .restaurant {
+        width: 40vw;
+    }
+    
+    img {
+        width:40vw;
+        height:25vh;
+        object-fit: cover;
+        border-radius: 25px 25px 0px 0px;
+    }
+
+    }
+}
+    
+
+.restaurant--new {
     background:$color-tertiary;
     width: 75px;
     text-align: center;

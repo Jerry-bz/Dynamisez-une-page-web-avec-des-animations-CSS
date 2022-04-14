@@ -20,15 +20,23 @@ footer {
     a {
         display:flex;
         margin:1% 0 1% 5%;
-        text-decoration: none;
         color:white;
     }
 
-    span {
-        margin-left: 3%;
+    i::before {
+        content: "$0";
+        position:absolute;
     }
-    
-    .footer__space {
-        margin-left:4.5%;
+
+    span {
+        margin-left:2em;
+    }
+}
+
+@media (min-width: 992px) {
+    footer {
+        div {
+            display: flex;
+        }
     }
 }

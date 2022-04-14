@@ -5,11 +5,16 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   display: flex;
   justify-content: center;
   font-family: "Shrikhand", cursive;
-  height: 12vh;
+  height: 8vh;
 }
 
 .button--purple {
@@ -19,8 +24,20 @@
   opacity: 80%;
   border: none;
   color: white;
-  padding: 5% 10%;
+  padding: 2em 5em;
   cursor: pointer;
+}
+
+.menu__picture {
+  height: 35%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .menu__picture {
+    height: 60vh;
+  }
 }
 
 .localization__text {
@@ -37,7 +54,7 @@
   display: flex;
   justify-content: center;
   width: 80%;
-  margin-right: 10%;
+  margin-right: 3em;
 }
 
 .localization i {
@@ -50,33 +67,33 @@
   align-items: center;
   text-align: center;
   background-color: whitesmoke;
-  padding-bottom: 5%;
+  padding-bottom: 2.5em;
 }
 
 .reservation__text1 {
-  margin: 1% 0;
+  margin: 0.5em 0;
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
 }
 
 .reservation__text2 {
-  margin: 1% 0;
-  padding-bottom: 5%;
+  margin: 0.5em 0;
+  padding-bottom: 1.5em;
   font-family: "Roboto", sans-serif;
 }
 
 .functioning {
-  padding-bottom: 10%;
+  padding-bottom: 3em;
 }
 
 .functioning__title {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  padding: 5% 0 0 3%;
+  padding: 2em 0em 0em 0em;
   margin-left: 5%;
 }
 
-.functioning .functioning--menu1 {
+.functioning-menu {
   display: flex;
   align-items: center;
   font-family: "Roboto", sans-serif;
@@ -88,7 +105,7 @@
   border: none;
   background-color: whitesmoke;
   width: 85%;
-  margin: 5% 0 3% 5%;
+  margin: 1em 2% 1em 5%;
 }
 
 .functioning--number {
@@ -117,38 +134,30 @@
   color: #9356DC;
 }
 
-#restaurants {
+.restaurants {
   background-color: whitesmoke;
   padding-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .restaurants__title {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  padding: 5% 0 0 3%;
-  margin-right: 55%;
+  padding: 2em 0em 0em 0em;
+  margin-left: 5%;
 }
 
 .restaurant {
   position: relative;
   border-radius: 25px;
   box-shadow: 3px 3px lightgrey;
-  width: 91vw;
+  width: 95vw;
   background-color: white;
-  margin: 5% 0%;
-  padding-bottom: 0.5vh;
-}
-
-.restaurant a {
-  text-decoration: none;
-  color: inherit;
+  margin: 1.5em 3%;
+  padding-bottom: 1em;
 }
 
 .restaurant img {
-  width: 91vw;
+  width: 95vw;
   height: 28vh;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
@@ -176,7 +185,24 @@
   padding-bottom: 2%;
 }
 
-.box__new {
+@media (min-width: 992px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurants .restaurant {
+    width: 40vw;
+  }
+  .restaurants img {
+    width: 40vw;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 25px 25px 0px 0px;
+  }
+}
+
+.restaurant--new {
   background: #99E2D0;
   width: 75px;
   text-align: center;
@@ -187,6 +213,79 @@
   top: 8%;
   left: 70%;
   font-weight: 500;
+}
+
+.arrow--left {
+  position: relative;
+  right: 15vw;
+}
+
+.menus {
+  position: relative;
+  margin-top: -21%;
+  background-color: whitesmoke;
+  width: 90%;
+  border-radius: 50px 50px 0px 0px;
+  padding: 5% 5%;
+  z-index: 2;
+  font-family: "Roboto", sans-serif;
+}
+
+.menus p {
+  font-weight: lighter;
+}
+
+@media (min-width: 992px) {
+  .menus {
+    margin-top: -5%;
+  }
+}
+
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  padding-bottom: 0.5em;
+}
+
+.menu__title i {
+  position: absolute;
+  left: 85%;
+}
+
+.menu {
+  margin: 1.5em 0em;
+  padding: 0.75em 1em;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 3px 3px lightgrey;
+  background-color: white;
+}
+
+.menu__category {
+  padding: 0.5em 0em;
+}
+
+.menu__line {
+  border-bottom: #99E2D0 solid 3px;
+  width: 2.5em;
+}
+
+.menu__meal {
+  font-weight: bolder;
+}
+
+.menu__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 0%;
+}
+
+.menu span {
+  font-weight: bold;
+}
+
+.menu__button {
+  padding: 5% 0%;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -210,15 +309,21 @@ footer ul li {
 footer a {
   display: flex;
   margin: 1% 0 1% 5%;
-  text-decoration: none;
   color: white;
 }
 
-footer span {
-  margin-left: 3%;
+footer i::before {
+  content: "$0";
+  position: absolute;
 }
 
-footer .footer__space {
-  margin-left: 4.5%;
+footer span {
+  margin-left: 2em;
+}
+
+@media (min-width: 992px) {
+  footer div {
+    display: flex;
+  }
 }
 /*# sourceMappingURL=main.css.map */

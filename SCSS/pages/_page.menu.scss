@@ -1,0 +1,71 @@
+
+.arrow--left {
+    position: relative;
+    right:15vw;
+}
+
+.menus {
+    position: relative;
+    margin-top: -21%;
+    background-color:$background;
+    width: 90%;
+    border-radius: 50px 50px 0px 0px;
+    padding:5% 5%;
+    z-index: 2;
+    font-family: $font-text;
+    p {
+        font-weight: lighter;
+    }
+}
+
+@media (min-width: 992px) {
+    .menus {
+        margin-top:-5%;
+    }
+}
+    
+
+
+.menu__title {
+    font-family: $font-title;
+    padding-bottom: 0.5em;
+
+i {
+    position: absolute;
+    left:85%;
+  }
+}
+
+.menu {
+   margin:1.5em 0em; 
+   padding:0.75em 1em;
+   border-radius: 15px 15px 15px 15px;
+   box-shadow: 3px 3px $boxshadow;
+   background-color: white;
+
+   &__category {
+       padding:0.5em 0em;
+   }
+
+   &__line {
+       border-bottom: $color-tertiary solid 3px;
+       width: 2.5em;
+   }
+
+    &__meal {
+        font-weight:bolder;
+    }
+
+    &__description {
+        @include flex-row-space;
+        padding: 1% 0%;
+    }
+    span {
+        font-weight: bold;
+    }
+}
+
+.menu__button {
+    padding:5% 0%;
+    @include flex-row-center;
+}
