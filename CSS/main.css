@@ -24,8 +24,15 @@ a {
   opacity: 80%;
   border: none;
   color: white;
-  padding: 2em 5em;
+  padding: 1em 3em;
   cursor: pointer;
+  box-shadow: 2px 2px 3px lightgrey;
+  transition: all 200ms ease-in-out;
+}
+
+.button--purple:hover {
+  filter: brightness(1.2);
+  box-shadow: 2px 2px 3px #343333;
 }
 
 .menu__picture {
@@ -38,6 +45,31 @@ a {
   .menu__picture {
     height: 60vh;
   }
+}
+
+.loader {
+  position: absolute;
+  transform: translate(40vw, 30vh);
+}
+
+.loader__spinner {
+  visibility: hidden;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-right: 16px solid #99E2D0;
+  border-bottom: 16px solid #FF79DA;
+  border-left: 16px solid whitesmoke;
+  width: 120px;
+  height: 120px;
+  animation-name: spin;
+  animation: spin 3s ease-in-out;
+  -webkit-animation: spin 3s ease-in-out;
+}
+
+.loading-page {
+  animation-name: loading;
+  animation-duration: 3s;
 }
 
 .localization__text {
@@ -158,13 +190,13 @@ a {
 
 .restaurant img {
   width: 95vw;
-  height: 28vh;
+  height: 31vh;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
 }
 
 .restaurant__text {
-  margin: 2% 0% 1% 5%;
+  margin: 3% 0% 1% 5%;
 }
 
 .restaurant__element1 {
@@ -176,8 +208,14 @@ a {
 }
 
 .restaurant i {
-  margin-right: 10%;
-  margin-top: 15px;
+  transform: translate(-1.5em, 0.5em);
+  transition: all 400ms ease-in-out;
+}
+
+.restaurant i:hover {
+  background-clip: text;
+  -webkit-text-fill-color: #9356DC;
+  font-weight: bold;
 }
 
 .restaurant__element2 {
@@ -196,7 +234,7 @@ a {
   }
   .restaurants img {
     width: 40vw;
-    height: 25vh;
+    height: 35vh;
     object-fit: cover;
     border-radius: 25px 25px 0px 0px;
   }
@@ -211,7 +249,7 @@ a {
   font-size: "Roboto", sans-serif;
   position: absolute;
   top: 8%;
-  left: 70%;
+  left: 75%;
   font-weight: 500;
 }
 
@@ -222,7 +260,7 @@ a {
 
 .menus {
   position: relative;
-  margin-top: -21%;
+  margin-top: -13%;
   background-color: whitesmoke;
   width: 90%;
   border-radius: 50px 50px 0px 0px;
@@ -324,6 +362,33 @@ footer span {
 @media (min-width: 992px) {
   footer div {
     display: flex;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: scaleX(0) rotate(0turn);
+    opacity: .1;
+    visibility: visible;
+  }
+  17% {
+    transform: rotate(1turn);
+    transform-origin: center;
+  }
+  24% {
+    transform: rotate(1.5turn);
+  }
+  46% {
+    transform: rotate(2turn);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+
+@keyframes loading {
+  0%, 100% {
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=main.css.map */

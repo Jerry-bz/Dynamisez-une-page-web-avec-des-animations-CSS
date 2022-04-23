@@ -5,6 +5,12 @@
     opacity: 80%;
     border: none;
     color: white;
-    padding: 2em 5em;
+    padding: 1em 3em;
     cursor: pointer;
+    box-shadow: 2px 2px 3px $boxshadow;
+    transition: all 200ms ease-in-out;
+    &:hover {
+        filter: brightness(1.2);
+        box-shadow: 2px 2px 3px rgb(52, 51, 51);
+    }
 }

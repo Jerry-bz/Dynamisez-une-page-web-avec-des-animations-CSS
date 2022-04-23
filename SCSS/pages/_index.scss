@@ -1,3 +1,32 @@
+//  Spinner
+
+.loader {
+    position:absolute;
+    transform: translate(40vw, 30vh);
+
+    &__spinner {
+    visibility: hidden;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid $color-primary;
+    border-right: 16px solid $color-tertiary;
+    border-bottom: 16px solid $color-secondary;
+    border-left: 16px solid $background;
+    width: 120px;
+    height: 120px;
+    animation-name: spin;
+    animation: spin 3s ease-in-out;
+    -webkit-animation: spin 3s ease-in-out;
+  }
+}
+
+// Chargement de la page 
+
+.loading-page {
+    animation-name:loading;
+    animation-duration: 3s;
+}
+
 
 .localization {
     &__text {
@@ -108,12 +137,12 @@
     
     img {
         width:95vw;
-        height:28vh;
+        height:31vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
     &__text {
-        margin:2% 0% 1% 5%;
+        margin:3% 0% 1% 5%;
     }
 
     &__element1 {
@@ -122,9 +151,16 @@
         justify-content: space-between;
     }
 
-    i{
-        margin-right: 10%;
-        margin-top: 15px;
+    i {
+       transform:translate(-1.5em, 0.5em);
+       transition:all 400ms ease-in-out;
+    }
+    // Le coeur se rempli au survol
+       &:hover {
+       background-clip:text;
+       -webkit-text-fill-color:$color-primary;
+       font-weight: bold;
+       }
     }
     
     &__element2 {
@@ -132,9 +168,6 @@
         padding-bottom: 2%;
     }
     
-}
-
-
 @media (min-width: 992px) {
     .restaurants {
       @include flex-col-center;
@@ -145,7 +178,7 @@
     
     img {
         width:40vw;
-        height:25vh;
+        height:35vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
@@ -163,6 +196,8 @@
     font-size: $font-text;
     position: absolute;
     top:8%;
-    left:70%;
+    left:75%;
     font-weight: 500;
 }
+
+   

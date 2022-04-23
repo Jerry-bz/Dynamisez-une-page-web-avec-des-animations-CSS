@@ -1,0 +1,29 @@
+@keyframes spin {
+    0% { 
+        transform:scaleX(0) rotate(0turn);
+        opacity: .1;
+        visibility:visible;
+     }
+
+     17% {
+        transform:rotate(1turn);
+        transform-origin: center;
+    }
+    24% {
+        transform:rotate(1.5turn);
+    }
+    46% {
+        transform:rotate(2turn);
+    }
+   
+    100% {
+        transform:rotate(-1turn);
+    }
+
+}
+
+@keyframes loading {
+    0%,100% {
+        visibility: hidden;
+    }
+}
