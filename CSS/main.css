@@ -35,6 +35,17 @@ a {
   box-shadow: 2px 2px 3px #343333;
 }
 
+.restaurant--heart {
+  transform: translate(-1.5em, 0.5em);
+  transition: all 400ms ease-in-out;
+}
+
+.restaurant--heart:hover {
+  background-clip: text;
+  -webkit-text-fill-color: #9356DC;
+  font-weight: bold;
+}
+
 .menu__picture {
   height: 35%;
   width: 100%;
@@ -207,17 +218,6 @@ a {
   justify-content: space-between;
 }
 
-.restaurant i {
-  transform: translate(-1.5em, 0.5em);
-  transition: all 400ms ease-in-out;
-}
-
-.restaurant i:hover {
-  background-clip: text;
-  -webkit-text-fill-color: #9356DC;
-  font-weight: bold;
-}
-
 .restaurant__element2 {
   font-family: "Roboto", sans-serif;
   padding-bottom: 2%;
@@ -284,9 +284,9 @@ a {
   padding-bottom: 0.5em;
 }
 
-.menu__title i {
+.menu__title .restaurant--heart {
   position: absolute;
-  left: 85%;
+  left: 95%;
 }
 
 .menu {

@@ -150,23 +150,12 @@
         @include flex-row-center;
         justify-content: space-between;
     }
-
-    i {
-       transform:translate(-1.5em, 0.5em);
-       transition:all 400ms ease-in-out;
-    }
-    // Le coeur se rempli au survol
-       &:hover {
-       background-clip:text;
-       -webkit-text-fill-color:$color-primary;
-       font-weight: bold;
-       }
-    }
     
     &__element2 {
         font-family: $font-text;
         padding-bottom: 2%;
     }
+}
     
 @media (min-width: 992px) {
     .restaurants {
@@ -199,5 +188,3 @@
     left:75%;
     font-weight: 500;
 }
-
-   
