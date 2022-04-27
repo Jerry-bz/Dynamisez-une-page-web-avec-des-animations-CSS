@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
@@ -44,6 +45,7 @@ a {
   background-clip: text;
   -webkit-text-fill-color: #9356DC;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .menu__picture {
@@ -59,11 +61,12 @@ a {
 }
 
 .loader {
-  position: absolute;
-  transform: translate(40vw, 30vh);
+  position: relative;
+  transform: translate(45vw, 30vh);
 }
 
 .loader__spinner {
+  position: absolute;
   visibility: hidden;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -76,6 +79,12 @@ a {
   animation-name: spin;
   animation: spin 3s ease-in-out;
   -webkit-animation: spin 3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+  .loader {
+    transform: translate(30vw, 15vh);
+  }
 }
 
 .loading-page {
@@ -149,6 +158,12 @@ a {
   background-color: whitesmoke;
   width: 85%;
   margin: 1em 2% 1em 5%;
+  transition: transform 300ms ease-in-out;
+}
+
+.functioning-menu:hover {
+  transform: translate(2px, -5px);
+  cursor: pointer;
 }
 
 .functioning--number {
@@ -193,14 +208,20 @@ a {
   position: relative;
   border-radius: 25px;
   box-shadow: 3px 3px lightgrey;
-  width: 95vw;
+  width: 93vw;
   background-color: white;
   margin: 1.5em 3%;
   padding-bottom: 1em;
+  transition: transform 300ms ease-in-out;
+}
+
+.restaurant:hover {
+  transform: translate(2px, -5px);
+  cursor: pointer;
 }
 
 .restaurant img {
-  width: 95vw;
+  width: 93vw;
   height: 31vh;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
@@ -295,6 +316,7 @@ a {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 3px 3px lightgrey;
   background-color: white;
+  position: relative;
 }
 
 .menu__category {
@@ -316,14 +338,72 @@ a {
   padding: 1% 0%;
 }
 
+.menu__icon {
+  height: 100%;
+  width: 4.5em;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  border-radius: 0px 15px 15px 0px;
+  visibility: hidden;
+  transition: all 500ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.menu__icon i {
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 800ms ease;
+}
+
 .menu span {
   font-weight: bold;
+  transition: all 1s ease;
+}
+
+.menu:hover .menu__icon {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.menu:hover span {
+  transform: translate(-100px);
+}
+
+.menu:hover i {
+  transform: rotate(1turn);
 }
 
 .menu__button {
   padding: 5% 0%;
   display: flex;
   justify-content: center;
+}
+
+.loading__entrées {
+  animation: menu;
+  animation-duration: 800ms;
+}
+
+.loading__plats {
+  animation: menu;
+  animation-duration: 1600ms;
+}
+
+.loading__desserts {
+  animation: menu;
+  animation-duration: 2400ms;
 }
 
 footer {
@@ -389,6 +469,26 @@ footer span {
 @keyframes loading {
   0%, 100% {
     visibility: hidden;
+  }
+}
+
+@keyframes menu {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all;
+  }
+  50% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    transform-origin: left;
+    visibility: visible;
+    transition: all ease;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
