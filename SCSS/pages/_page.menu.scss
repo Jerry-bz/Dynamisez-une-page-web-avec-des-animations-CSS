@@ -121,16 +121,15 @@
 // Chargements des plats en fonction des groupes 
 
 .loading__entrées {
-    animation: menu;
-    animation-duration: 800ms;
+    animation: menu 1000ms ease-in-out;
+    
 }
 
 .loading__plats {
-    animation: menu;
-    animation-duration: 1600ms;
+    animation: menu 2000ms ease-in-out;
+  
 }
 
 .loading__desserts {
-    animation:menu;
-    animation-duration: 2400ms;
+    animation: menu 3000ms ease-in-out;
 }

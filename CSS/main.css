@@ -392,18 +392,15 @@ a {
 }
 
 .loading__entrées {
-  animation: menu;
-  animation-duration: 800ms;
+  animation: menu 1000ms ease-in-out;
 }
 
 .loading__plats {
-  animation: menu;
-  animation-duration: 1600ms;
+  animation: menu 2000ms ease-in-out;
 }
 
 .loading__desserts {
-  animation: menu;
-  animation-duration: 2400ms;
+  animation: menu 3000ms ease-in-out;
 }
 
 footer {
@@ -477,16 +474,13 @@ footer span {
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
-    transition: all;
+    transform-origin: left;
   }
   50% {
     visibility: hidden;
-    opacity: 0;
   }
   100% {
-    transform-origin: left;
     visibility: visible;
-    transition: all ease;
     transform: scale(1);
     opacity: 1;
   }
