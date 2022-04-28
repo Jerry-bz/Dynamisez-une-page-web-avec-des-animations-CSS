@@ -1,3 +1,4 @@
+// Animation du loader spinner 
 @keyframes spin {
     0% { 
         transform:scaleX(0) rotate(0turn);
@@ -22,12 +23,14 @@
 
 }
 
+// Chargement de la page d'acceuil
 @keyframes loading {
     0%,100% {
         visibility: hidden;
     }
 }
 
+// Apparition des meunus par groupe
 @keyframes menu {
     0% {
           visibility:hidden;

@@ -37,8 +37,9 @@ a {
 }
 
 .restaurant--heart {
-  transform: translate(-1.5em, 0.5em);
+  transform: translate(-1.5em, 0.5em) scale(1, 1);
   transition: all 400ms ease-in-out;
+  transform-origin: bottom;
 }
 
 .restaurant--heart:hover {
@@ -46,6 +47,7 @@ a {
   -webkit-text-fill-color: #9356DC;
   font-weight: bold;
   cursor: pointer;
+  transform: translate(-1.5em, 0.5em) scale(1.2, 1.2);
 }
 
 .menu__picture {
@@ -83,7 +85,7 @@ a {
 
 @media (max-width: 992px) {
   .loader {
-    transform: translate(30vw, 15vh);
+    transform: translate(32vw, 15vh);
   }
 }
 
@@ -158,12 +160,12 @@ a {
   background-color: whitesmoke;
   width: 85%;
   margin: 1em 2% 1em 5%;
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .functioning-menu:hover {
-  transform: translate(2px, -5px);
   cursor: pointer;
+  background-color: #f2eafb;
 }
 
 .functioning--number {
@@ -317,6 +319,7 @@ a {
   box-shadow: 3px 3px lightgrey;
   background-color: white;
   position: relative;
+  font-size: 0.9em;
 }
 
 .menu__category {
@@ -340,7 +343,7 @@ a {
 
 .menu__icon {
   height: 100%;
-  width: 4.5em;
+  width: 3.5em;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
@@ -359,8 +362,8 @@ a {
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,7 +372,7 @@ a {
 
 .menu span {
   font-weight: bold;
-  transition: all 1s ease;
+  transition: all 800ms ease;
 }
 
 .menu:hover .menu__icon {
@@ -378,7 +381,7 @@ a {
 }
 
 .menu:hover span {
-  transform: translate(-100px);
+  transform: translate(-3.5em);
 }
 
 .menu:hover i {
