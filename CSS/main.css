@@ -84,8 +84,11 @@ a {
   width: 120px;
   height: 120px;
   animation-name: spin;
+  -webkit-animation-name: spin;
+  -moz-animation-name: spin;
   animation: spin 3s ease-in-out;
   -webkit-animation: spin 3s ease-in-out;
+  -moz-animation: spin 3s ease-in-out;
 }
 
 @media (max-width: 992px) {
@@ -96,7 +99,11 @@ a {
 
 .loading-page {
   animation-name: loading;
+  -webkit-animation-name: loading;
+  -moz-animation-name: loading;
   animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
 }
 
 .localization__text {
@@ -363,7 +370,7 @@ a {
   transform-origin: right;
 }
 
-.menu__icon i {
+.menu__icon .menu--icon {
   color: #99E2D0;
   background-color: white;
   border-radius: 50%;
@@ -389,7 +396,7 @@ a {
   transform: translate(-3.5em);
 }
 
-.menu:hover i {
+.menu:hover .menu--icon {
   transform: rotate(1turn);
 }
 
@@ -401,14 +408,20 @@ a {
 
 .loading__entrées {
   animation: menu 1000ms ease-in-out;
+  -webkit-animation: menu 1000ms ease-in-out;
+  -moz-animation: menu 1000ms ease-in-out;
 }
 
 .loading__plats {
   animation: menu 2000ms ease-in-out;
+  -webkit-animation: menu 2000ms ease-in-out;
+  -moz-animation: menu 2000ms ease-in-out;
 }
 
 .loading__desserts {
   animation: menu 3000ms ease-in-out;
+  -webkit-animation: menu 3000ms ease-in-out;
+  -moz-animation: menu 3000ms ease-in-out;
 }
 
 footer {
