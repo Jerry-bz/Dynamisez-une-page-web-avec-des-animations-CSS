@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+  max-width: 1530px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -269,7 +274,7 @@ a {
   text-align: center;
   color: #217460;
   padding: 1%;
-  font-size: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   position: absolute;
   top: 8%;
   left: 75%;

@@ -9,6 +9,11 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+    max-width: 1530px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
