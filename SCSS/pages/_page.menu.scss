@@ -45,7 +45,7 @@
    box-shadow: 3px 3px $boxshadow;
    background-color: white;
    position: relative;
-   font-size:0.9em;
+   font-size:0.8em;
 
    &__category {
        padding:0.5em 0em;
@@ -97,6 +97,12 @@
     span {
         font-weight: bold;
         transition: all 800ms ease;
+    }
+}
+
+@media (min-width: 992px) {
+    .menu {
+        font-size:1.3em;
     }
 }
 

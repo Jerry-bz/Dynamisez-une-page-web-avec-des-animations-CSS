@@ -331,7 +331,7 @@ a {
   box-shadow: 3px 3px lightgrey;
   background-color: white;
   position: relative;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .menu__category {
@@ -385,6 +385,12 @@ a {
 .menu span {
   font-weight: bold;
   transition: all 800ms ease;
+}
+
+@media (min-width: 992px) {
+  .menu {
+    font-size: 1.3em;
+  }
 }
 
 .menu:hover .menu__icon {
