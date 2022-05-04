@@ -334,6 +334,10 @@ a {
   font-size: 0.8em;
 }
 
+.menu:hover {
+  cursor: pointer;
+}
+
 .menu__category {
   padding: 0.5em 0em;
 }
