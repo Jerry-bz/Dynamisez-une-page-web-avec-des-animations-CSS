@@ -206,6 +206,12 @@ a {
   color: #9356DC;
 }
 
+@media (min-width: 992px) {
+  .functionning-container {
+    display: flex;
+  }
+}
+
 .restaurants {
   background-color: whitesmoke;
   padding-bottom: 10%;
@@ -259,17 +265,17 @@ a {
 }
 
 @media (min-width: 992px) {
-  .restaurants {
+  .restaurant-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .restaurants .restaurant {
+  .restaurant-container .restaurant {
     width: 40vw;
   }
-  .restaurants img {
+  .restaurant-container img {
     width: 40vw;
-    height: 35vh;
+    height: 30vh;
     object-fit: cover;
     border-radius: 25px 25px 0px 0px;
   }
@@ -392,8 +398,14 @@ a {
 }
 
 @media (min-width: 992px) {
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   .menu {
-    font-size: 1.3em;
+    font-size: 1em;
+    width: 45%;
   }
 }
 

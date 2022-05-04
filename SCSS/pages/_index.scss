@@ -81,6 +81,7 @@
     } 
 }
 
+
 // Section qui comprend la partie fonctionnement
 .functioning {
     padding-bottom:3em;
@@ -137,6 +138,12 @@
     }
 }
 
+@media (min-width: 992px) {
+    .functionning-container {
+        display: flex;
+    }
+}
+
 // Section qui comprends la partie restaurants
 .restaurants {
     background-color:$background;
@@ -187,8 +194,10 @@
 }
     
 @media (min-width: 992px) {
-    .restaurants {
-      @include flex-col-center;
+    .restaurant-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
     .restaurant {
         width: 40vw;
@@ -196,7 +205,7 @@
     
     img {
         width:40vw;
-        height:35vh;
+        height:30vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
