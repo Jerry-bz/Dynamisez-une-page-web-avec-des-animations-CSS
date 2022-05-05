@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
@@ -42,17 +42,17 @@ a {
 }
 
 .restaurant--heart {
-  transform: translate(-1.5em, 0.5em) scale(1, 1);
-  transition: all 400ms ease-in-out;
+  transform: translate(-0.8em, 0.2em) scale(1, 1);
+  transition: all 300ms linear;
   transform-origin: bottom;
 }
 
 .restaurant--heart:hover {
   background-clip: text;
-  -webkit-text-fill-color: #FF79DA;
-  font-weight: bold;
+  color: #cd1feb;
+  font-weight: bolder;
   cursor: pointer;
-  transform: translate(-1.5em, 0.5em) scale(1.2, 1.2);
+  transform: translate(-0.8em, 0.2em) scale(1.2, 1.2);
 }
 
 .menu__picture {
@@ -174,14 +174,15 @@ a {
 .functioning--number {
   color: white;
   background-color: #9356DC;
-  height: 30px;
-  width: 30px;
+  height: 15px;
+  width: 15px;
   border-radius: 25px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  right: 11px;
+  right: 13px;
+  padding: 8px;
 }
 
 .functioning i {
@@ -233,7 +234,7 @@ a {
 
 .restaurant img {
   width: 93vw;
-  height: 31vh;
+  height: 18vh;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
 }
@@ -252,7 +253,7 @@ a {
 
 .restaurant__element2 {
   font-family: "Roboto", sans-serif;
-  padding-bottom: 2%;
+  margin-top: -8px;
 }
 
 @media (min-width: 992px) {
@@ -276,13 +277,15 @@ a {
   background: #99E2D0;
   width: 75px;
   text-align: center;
-  color: #217460;
-  padding: 1%;
+  color: #2c9c81;
+  font-weight: bolder;
+  padding: 1.5% 2%;
   font-family: "Roboto", sans-serif;
   position: absolute;
   top: 8%;
-  left: 75%;
+  left: 73%;
   font-weight: 500;
+  z-index: 2;
 }
 
 .arrow--left {
@@ -318,17 +321,18 @@ a {
 
 .menu__title .restaurant--heart {
   position: absolute;
-  left: 95%;
+  left: 90%;
+  top: 3%;
 }
 
 .menu {
   margin: 1.5em 0em;
   padding: 0.75em 1em;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 20px 20px 20px 20px;
   box-shadow: 3px 3px lightgrey;
   background-color: white;
   position: relative;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .menu:hover {

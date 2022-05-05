@@ -18,15 +18,15 @@
 
 // Bouton coeur 
 .restaurant--heart {
-    transform:translate(-1.5em, 0.5em) scale(1, 1);
-    transition:all 400ms ease-in-out;
+    transform:translate(-0.8em, 0.2em) scale(1, 1);
+    transition:all 300ms linear;
     transform-origin: bottom;
  // Le coeur se remplit au survol et s'élargit
     &:hover {
-    background-clip:text;
-    -webkit-text-fill-color:$color-secondary;
-    font-weight: bold;
-    cursor: pointer;
-    transform:translate(-1.5em, 0.5em) scale(1.2, 1.2);
+        background-clip:text;
+        color:darken($color-primary, $amount: 25)+ darken($color-secondary, $amount: 50);
+        font-weight: bolder;
+        cursor: pointer;
+        transform:translate(-0.8em, 0.2em) scale(1.2, 1.2);
     }
  }

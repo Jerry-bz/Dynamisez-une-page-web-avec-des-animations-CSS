@@ -33,7 +33,8 @@
 
 .restaurant--heart {
     position: absolute;
-    left:95%;
+    left:90%;
+    top:3%;
 }
 }
 
@@ -41,11 +42,11 @@
 .menu {
    margin:1.5em 0em; 
    padding:0.75em 1em;
-   border-radius: 15px 15px 15px 15px;
+   border-radius: 20px 20px 20px 20px;
    box-shadow: 3px 3px $boxshadow;
    background-color: white;
    position: relative;
-   font-size:0.8em;
+   font-size:1em;
    &:hover {
        cursor: pointer;
    }

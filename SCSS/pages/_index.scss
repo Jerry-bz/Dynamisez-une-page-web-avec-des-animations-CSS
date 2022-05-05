@@ -105,13 +105,14 @@
 .functioning--number {
     color:white;
     background-color: $color-primary;
-    height:30px;
-    width: 30px;
+    height:15px;
+    width: 15px;
     border-radius: 25px 25px;
     @include flex-row-center;
     align-items: center;
     position:relative;
-    right:11px;
+    right:13px;
+    padding: 8px;
 }
 
 
@@ -163,7 +164,7 @@
 
     img {
         width:93vw;
-        height:31vh;
+        height:18vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
@@ -180,7 +181,7 @@
     
     &__element2 {
         font-family: $font-text;
-        padding-bottom: 2%;
+        margin-top: -8px;
     }
 }
     
@@ -209,11 +210,13 @@
     background:$color-tertiary;
     width: 75px;
     text-align: center;
-    color: darken($color: $color-tertiary, $amount: 45);
-    padding:1%;
+    color: darken($color: $color-tertiary, $amount: 35);
+    font-weight: bolder;
+    padding:1.5% 2%;
     font-family: $font-text;
     position: absolute;
     top:8%;
-    left:75%;
+    left:73%;
     font-weight: 500;
+    z-index: 2;
 }
