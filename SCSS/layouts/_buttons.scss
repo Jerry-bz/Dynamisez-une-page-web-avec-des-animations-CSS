@@ -24,7 +24,7 @@
  // Le coeur se remplit au survol et s'élargit
     &:hover {
     background-clip:text;
-    -webkit-text-fill-color:$color-primary;
+    -webkit-text-fill-color:$color-secondary;
     font-weight: bold;
     cursor: pointer;
     transform:translate(-1.5em, 0.5em) scale(1.2, 1.2);
