@@ -49,7 +49,7 @@ a {
 
 .restaurant--heart:hover {
   background-clip: text;
-  -webkit-text-fill-color: #9356DC;
+  -webkit-text-fill-color: #FF79DA;
   font-weight: bold;
   cursor: pointer;
   transform: translate(-1.5em, 0.5em) scale(1.2, 1.2);
