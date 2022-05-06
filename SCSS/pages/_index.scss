@@ -37,17 +37,17 @@
 .localization {
     &__text {
         @include flex-row-center;
-        padding:2% 0;
+        padding:1.3em 0;
         font-family: $font-text;
         font-weight:bolder;
-        background-color:darken($color: $background, $amount: 10%);
+        background-color:darken($color: $background, $amount: 5%);
         box-shadow:inset 0px 2px 3px darken($boxshadow, $amount:25%);
     }
     
     p {
         @include flex-row-center;
         width: 80%;
-        margin-right:3em;
+        margin-right:1.8em;
     }
     i {
         padding-right: 3%;
@@ -61,7 +61,7 @@
     background-color:$background;
     padding-bottom:2.5em;
     &__text1 {
-        margin: 0.5em 0;
+        margin: 1.5em 0 0.5em 0;
         font-family: $font-text;
         font-weight: bolder;
     }
@@ -78,7 +78,7 @@
     padding-bottom:3em;
     &__title {
         @include police-title--bolder;
-        padding: 2em 0em 0em 0em;
+        padding: 2em 0em 1em 0em;
         margin-left:5%;
     }
 
@@ -192,12 +192,12 @@
       justify-content: space-around;
 
     .restaurant {
-        width: 40vw;
+        width: 35vw;
     }
     
     img {
-        width:40vw;
-        height:30vh;
+        width:35vw;
+        height:20vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
