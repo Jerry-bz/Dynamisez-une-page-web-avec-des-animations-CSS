@@ -304,10 +304,6 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
-.menus p {
-  font-weight: lighter;
-}
-
 @media (min-width: 992px) {
   .menus {
     margin-top: -5%;
@@ -333,6 +329,10 @@ a {
   background-color: white;
   position: relative;
   font-size: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
 .menu:hover {
@@ -348,14 +348,23 @@ a {
   width: 2.5em;
 }
 
+.menu__informations {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .menu__meal {
   font-weight: bolder;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menu__description {
-  display: flex;
-  justify-content: space-between;
   padding: 1% 0%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menu__icon {
@@ -410,7 +419,7 @@ a {
 }
 
 .menu:hover span {
-  transform: translate(-3.5em);
+  margin-right: 50px;
 }
 
 .menu:hover .menu--icon {
