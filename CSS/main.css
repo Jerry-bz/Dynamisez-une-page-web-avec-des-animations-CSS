@@ -238,7 +238,7 @@ a {
 
 .restaurant img {
   width: 93vw;
-  height: 18vh;
+  height: 25vh;
   object-fit: cover;
   border-radius: 25px 25px 0px 0px;
 }
@@ -279,17 +279,24 @@ a {
 
 .restaurant--new {
   background: #99E2D0;
-  width: 75px;
+  width: 65px;
   text-align: center;
   color: #2c9c81;
   font-weight: bolder;
   padding: 1.5% 2%;
   font-family: "Roboto", sans-serif;
   position: absolute;
-  top: 8%;
-  left: 73%;
+  top: 10%;
+  left: 75%;
   font-weight: 500;
   z-index: 2;
+}
+
+@media (max-width: 350px) {
+  .restaurant--new {
+    left: 65%;
+    width: 65px;
+  }
 }
 
 .arrow--left {

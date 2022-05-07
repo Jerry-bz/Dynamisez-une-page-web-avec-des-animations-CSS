@@ -164,7 +164,7 @@
 
     img {
         width:93vw;
-        height:18vh;
+        height:25vh;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
     }
@@ -208,15 +208,22 @@
 // Logo qui comprends le texte Nouveau 
 .restaurant--new {
     background:$color-tertiary;
-    width: 75px;
+    width: 65px;
     text-align: center;
     color: darken($color: $color-tertiary, $amount: 35);
     font-weight: bolder;
     padding:1.5% 2%;
     font-family: $font-text;
     position: absolute;
-    top:8%;
-    left:73%;
+    top:10%;
+    left:75%;
     font-weight: 500;
     z-index: 2;
+}
+
+@media (max-width:350px) {
+    .restaurant--new {
+        left:65%;
+        width: 65px;
+    }
 }
