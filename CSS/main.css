@@ -20,7 +20,7 @@ a {
   display: flex;
   justify-content: center;
   font-family: "Shrikhand", cursive;
-  height: 5vh;
+  height: 3.5em;
   padding-top: 1em;
 }
 
@@ -175,6 +175,10 @@ a {
   background-color: #f2eafb;
 }
 
+.functioning-menu:hover .functionning--logo {
+  color: #9356DC;
+}
+
 .functioning--number {
   color: white;
   background-color: #9356DC;
@@ -196,10 +200,6 @@ a {
 
 .functioning__text {
   margin-left: 30px;
-}
-
-.functioning .functioning--logo {
-  color: #9356DC;
 }
 
 @media (min-width: 992px) {
@@ -294,7 +294,7 @@ a {
 
 .arrow--left {
   position: relative;
-  right: 15vw;
+  right: 21vw;
 }
 
 .menus {
